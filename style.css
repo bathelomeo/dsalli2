@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: gray;
+}
+.containerc{
+    position: relative;
+    display: flex;
+}
+.containerc .cardc{
+    position: relative;
+    width: 320px;
+    height: 450px;
+    background: #232323;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.containerc .cardc::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #9bdc28;
+    clip-path: circle( 150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+.containerc .cardc:hover::before{
+    clip-path: circle(300px at 80% -20px);
+    
+}
+.containerc .cardc::after{
+    content: "Nike";
+    position: absolute;
+    top: 30%;
+    left: -20px;
+    font-size: 12em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.04);
+}
+.containerc .cardc .imgBxc{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50px);
+    z-index: 10000;
+    width: 100%;
+    height: 200px;
+    transition: 0.5s;
+}
+.containerc .cardc:hover .imgBxc{
+    top: 0%;
+    transform: translate(0%);
+}
+.containerc .cardc .imgBxc img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-25deg);
+    width: 270px;
+}
+.containerc .cardc .contentc{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+}
+.containerc .cardc:hover .contentc{
+    height: 210px;
+}
+.containerc .cardc .contentc h2{
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: white;
+}
+.containerc .cardc .contentc .size{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+.containerc .cardc:hover .contentc .size{
+    opacity: 1;
+    visibility: visible;
+}
